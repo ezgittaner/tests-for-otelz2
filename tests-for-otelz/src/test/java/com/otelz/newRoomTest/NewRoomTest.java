@@ -20,6 +20,7 @@ public class NewRoomTest extends TestUtilities {
 		sleep(1000);
 
 		welcomePage.clickDeleteRoomLink();
+		sleep(1000);
 
 	}
 }
