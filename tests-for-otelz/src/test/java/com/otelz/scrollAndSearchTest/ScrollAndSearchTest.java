@@ -25,7 +25,11 @@ public class ScrollAndSearchTest extends TestUtilities {
 
 		welcomePage.searchOtel(cityname);
 
-		sleep(3000);
+		sleep(2000);
+
+		welcomePage.clickSearchButton();
+
+		sleep(1000);
 	}
 
 }

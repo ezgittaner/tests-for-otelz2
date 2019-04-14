@@ -14,6 +14,8 @@ public class WelcomePageObject extends BasePageObject {
 			.cssSelector("#vueApp > div.home-top-search-box > div > div > div > div > div.col-xs-4 > div > input");
 	private By selectCity = By.cssSelector(
 			"#vueApp > div.home-top-search-box > div > div > div > div > div.col-xs-4 > div > div > div > ul > li:nth-child(1) > a > span");
+	private By searchButton = By
+			.cssSelector("#vueApp > div.home-top-search-box > div > div > div > div > div.col-xs-2 > button");
 
 	public WelcomePageObject(WebDriver driver, Logger log) {
 		super(driver, log);
@@ -48,6 +50,12 @@ public class WelcomePageObject extends BasePageObject {
 		type(cityname, search);
 		waitForVisibilityOf(selectCity, 3);
 		click(selectCity);
+	}
+
+	public WelcomePageObject clickSearchButton() {
+		log.info("Clicking search button Welcome Page");
+		click(searchButton);
+		return new WelcomePageObject(driver, log);
 	}
 
 }
