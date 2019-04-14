@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="NewRoomTest" verbose="1" parallel="tests" thread-count="1">
+
+	<test name="NewRoomTest-FF">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.otelz.newRoomTest.NewRoomTest">
+			</class>
+		</classes>
+	</test>
+	</suite>

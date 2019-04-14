@@ -1,10 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TestSuites" verbose="1" parallel="tests" thread-count="1">
+<suite name="TestSuites" verbose="1">
 
 	<test name="NewRoomTest-CH">
 		<parameter name="browser" value="chrome"></parameter>
-		<parameter name="cityname" value="İZMİR"></parameter>
 		<classes>
 			<class name="com.otelz.newRoomTest.NewRoomTest">
 			</class>

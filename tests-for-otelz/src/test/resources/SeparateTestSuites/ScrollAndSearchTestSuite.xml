@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuites" verbose="1" parallel="tests" thread-count="1">
+
+	<test name="ScrollAndSearchTest-CH">
+		<parameter name="cityname" value="İZMİR"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.otelz.scrollAndSearchTest.ScrollAndSearchTest">
+			</class>
+		</classes>
+	</test>
+	
+
+</suite>
