@@ -7,6 +7,7 @@ import java.util.Set;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -39,6 +40,13 @@ public class BasePageObject {
 	/** Find all elements using given locator */
 	protected List<WebElement> findAll(By locator) {
 		return driver.findElements(locator);
+	}
+
+	/** Scroll down */
+	public void scrollDown() {
+		log.info("Scrolling down");
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("window.scrollBy(0, 1000)");
 	}
 
 	/** Click on element with given locator when its visible */

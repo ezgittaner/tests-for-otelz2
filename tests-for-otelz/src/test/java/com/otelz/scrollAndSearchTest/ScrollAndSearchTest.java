@@ -1,6 +1,5 @@
 package com.otelz.scrollAndSearchTest;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -17,9 +16,10 @@ public class ScrollAndSearchTest extends TestUtilities {
 		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
 		welcomePage.openPage();
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,1000)");
-		sleep(3000);
+		// scroll down
+		welcomePage.scrollDown();
+
+		sleep(2000);
 
 		welcomePage.clickSearchLink();
 
@@ -29,7 +29,6 @@ public class ScrollAndSearchTest extends TestUtilities {
 
 		welcomePage.clickSearchButton();
 
-		sleep(1000);
 	}
 
 }
