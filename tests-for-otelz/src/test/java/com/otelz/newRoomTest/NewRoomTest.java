@@ -17,10 +17,13 @@ public class NewRoomTest extends TestUtilities {
 		sleep(1000);
 		welcomePage.clickNewRoomLink();
 
+		takeScreenshot("New Room Added");
+
 		sleep(1000);
 
 		welcomePage.clickDeleteRoomLink();
 		sleep(1000);
+		takeScreenshot("New Room Deleted");
 
 	}
 }
