@@ -11,7 +11,7 @@ public class ScrollAndSearchTest extends TestUtilities {
 	@Parameters({ "cityname" })
 	@Test
 	public void scrollAndSearchTest(String cityname) {
-		log.info("Starting Scroll and Search Test");
+
 		// open main page
 		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
 		welcomePage.openPage();

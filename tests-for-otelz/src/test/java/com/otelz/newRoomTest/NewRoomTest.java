@@ -9,7 +9,7 @@ public class NewRoomTest extends TestUtilities {
 
 	@Test
 	public void newRoomTest() {
-		log.info("Starting NewRoomTest");
+
 		// open main page
 		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
 		welcomePage.openPage();

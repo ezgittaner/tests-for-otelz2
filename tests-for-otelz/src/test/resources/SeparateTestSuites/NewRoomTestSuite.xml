@@ -2,6 +2,11 @@
 
 <suite name="NewRoomTest" verbose="1" parallel="tests" thread-count="1">
 
+	<listeners>
+		<listener
+			class-name="com.otelz.base.TestListener"></listener>
+	</listeners>
+	
 	<test name="NewRoomTest-FF">
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
