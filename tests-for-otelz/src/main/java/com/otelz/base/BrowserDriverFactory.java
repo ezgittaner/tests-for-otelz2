@@ -7,7 +7,9 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class BrowserDriverFactory {
 
@@ -33,6 +35,22 @@ public class BrowserDriverFactory {
 		case "firefox":
 			System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver");
 			driver.set(new FirefoxDriver());
+			break;
+
+		case "chromeheadless":
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.addArguments("--headless");
+			driver.set(new ChromeDriver(chromeOptions));
+			break;
+
+		case "firefoxheadless":
+			System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver");
+			FirefoxBinary firefoxBinary = new FirefoxBinary();
+			firefoxBinary.addCommandLineOptions("--headless");
+			FirefoxOptions firefoxOptions = new FirefoxOptions();
+			firefoxOptions.setBinary(firefoxBinary);
+			driver.set(new FirefoxDriver(firefoxOptions));
 			break;
 
 		default:

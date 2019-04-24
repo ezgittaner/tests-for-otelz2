@@ -1,10 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.otelz</groupId>
-  <artifactId>tests-for-otelz</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>Tests for Otelz</name>
-  <dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.otelz</groupId>
+	<artifactId>tests-for-otelz</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Tests for Otelz</name>
+	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -30,7 +32,7 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.11.2</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 		<dependency>
 			<groupId>commons-io</groupId>
@@ -38,9 +40,28 @@
 			<version>2.6</version>
 		</dependency>
 
+		<!-- https://github.com/detro/ghostdriver -->
+		<dependency>
+			<groupId>com.github.detro</groupId>
+			<artifactId>ghostdriver</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+
+		<!-- https://github.com/seleniumhq/htmlunit-driver -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>htmlunit-driver</artifactId>
+			<version>2.35.1</version>
+		</dependency>
 
 	</dependencies>
 
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
 
 	<build>
 
