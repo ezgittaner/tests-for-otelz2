@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuites" verbose="1" thread-count="5">
+
+	<listeners>
+		<listener class-name="com.otelz.base.TestListener"></listener>
+	</listeners>
+
+	<test name="NewRoomTest-iOS">
+		<parameter name="deviceName" value="iPhone X"></parameter>
+		<classes>
+			<class name="com.otelz.newRoomTest.NewRoomTest">
+			</class>
+		</classes>
+	</test>
+
+
+</suite>
