@@ -6,7 +6,7 @@
 	<artifactId>tests-for-otelz</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Tests for Otelz</name>
-	
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
@@ -19,7 +19,7 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.14.0</version>
+			<version>4.0.0-alpha-1</version>
 		</dependency>
 
 		<!-- https://logging.apache.org/log4j/2.x/maven-artifacts.html -->
@@ -28,7 +28,7 @@
 			<artifactId>log4j-api</artifactId>
 			<version>2.11.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
@@ -73,5 +73,5 @@
 		</plugins>
 
 	</build>
-	
+
 </project>
